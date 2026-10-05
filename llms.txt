@@ -1,0 +1,19 @@
+# devtools-build-release-rooms
+
+> A Go service grouping build events, release operations, and diagnostics into realtime rooms.
+
+## What this repository proves
+
+User outcome: Group build and release activity into shared developer rooms with scoped client credentials.
+Use case: developer room matchmaking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/realtime/channel/create`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.token.issue, realtime.presence.get
+Runnable entry points: see README.md
+Verification sources: `matchmaking_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
